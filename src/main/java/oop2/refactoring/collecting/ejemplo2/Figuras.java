@@ -21,7 +21,7 @@ public class Figuras {
 //    private List<Figura> circulos() {
 //        var temp = new ArrayList<Figura>();
 //        for (Figura figura : this.figuras) {
-//            figura.soloCirculos(temp);
+//            figura.agregarCirculosA(temp);
 //        }
 //        return temp;
 //    }

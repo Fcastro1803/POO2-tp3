@@ -30,7 +30,7 @@ Algunos links de interes:
 - Parámetros
     - De entrada: Objetos Válidos.
     - De salida: No usamos más *null*. Optional o Listas vacias.
-- Collecting parameters: Filtrando colleciones polimórficas.
+- Collecting parameters: Filtrando colleciones polimórficas (Kent Beck's Collecting Parameters).
 
 ## Refactors Automatizados (IntelliJ o Eclipse)
 
@@ -59,7 +59,7 @@ para refactorizar.
       comida.
     - Apliquemos polimorfismo para eliminar preguntar por el tipo para la marca de exceso.
 - Ejercicio 4: Removamos el uso de *null*.
-- Ejercicio 5 (Opcional): Utilicemos polimorfismo y tell don't ask.
+- Ejercicio 5: Utilicemos polimorfismo y tell don't ask.
     - Antes de comenzar a refactorizar, escribamos tests.
 
 El ejercicio 2 fue tomado de [lamchau](https://github.com/lamchau/refactoring-exercise).
