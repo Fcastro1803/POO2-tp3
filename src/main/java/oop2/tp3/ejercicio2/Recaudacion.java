@@ -14,9 +14,9 @@ public class Recaudacion {
         if (options.containsKey("company_name")) {
             List<String[]> results = new ArrayList<String[]>();
 
-            for (int i = 0; i < csvData.size(); i++) {
-                if (csvData.get(i)[1].equals(options.get("company_name"))) {
-                    results.add(csvData.get(i));
+            for (String[] fila : csvData) {
+                if (fila[1].equals(options.get("company_name"))) {
+                    results.add(fila);
                 }
             }
             csvData = results;
@@ -25,9 +25,9 @@ public class Recaudacion {
         if (options.containsKey("city")) {
             List<String[]> results = new ArrayList<String[]>();
 
-            for (int i = 0; i < csvData.size(); i++) {
-                if (csvData.get(i)[4].equals(options.get("city"))) {
-                    results.add(csvData.get(i));
+            for (String[] fila : csvData) {
+                if (fila[4].equals(options.get("city"))) {
+                    results.add(fila);
                 }
             }
             csvData = results;
@@ -36,9 +36,9 @@ public class Recaudacion {
         if (options.containsKey("state")) {
             List<String[]> results = new ArrayList<String[]>();
 
-            for (int i = 0; i < csvData.size(); i++) {
-                if (csvData.get(i)[5].equals(options.get("state"))) {
-                    results.add(csvData.get(i));
+            for (String[] fila : csvData) {
+                if (fila[5].equals(options.get("state"))) {
+                    results.add(fila);
                 }
             }
             csvData = results;
@@ -47,9 +47,9 @@ public class Recaudacion {
         if (options.containsKey("round")) {
             List<String[]> results = new ArrayList<String[]>();
 
-            for (int i = 0; i < csvData.size(); i++) {
-                if (csvData.get(i)[9].equals(options.get("round"))) {
-                    results.add(csvData.get(i));
+            for (String[] fila : csvData) {
+                if (fila[9].equals(options.get("round"))) {
+                    results.add(fila);
                 }
             }
             csvData = results;
@@ -57,18 +57,18 @@ public class Recaudacion {
 
         List<Map<String, String>> output = new ArrayList<Map<String, String>>();
 
-        for (int i = 0; i < csvData.size(); i++) {
+        for (String[] fila : csvData) {
             Map<String, String> mapped = new HashMap<String, String>();
-            mapped.put("permalink", csvData.get(i)[0]);
-            mapped.put("company_name", csvData.get(i)[1]);
-            mapped.put("number_employees", csvData.get(i)[2]);
-            mapped.put("category", csvData.get(i)[3]);
-            mapped.put("city", csvData.get(i)[4]);
-            mapped.put("state", csvData.get(i)[5]);
-            mapped.put("funded_date", csvData.get(i)[6]);
-            mapped.put("raised_amount", csvData.get(i)[7]);
-            mapped.put("raised_currency", csvData.get(i)[8]);
-            mapped.put("round", csvData.get(i)[9]);
+            mapped.put("permalink", fila[0]);
+            mapped.put("company_name", fila[1]);
+            mapped.put("number_employees", fila[2]);
+            mapped.put("category", fila[3]);
+            mapped.put("city", fila[4]);
+            mapped.put("state", fila[5]);
+            mapped.put("funded_date", fila[6]);
+            mapped.put("raised_amount", fila[7]);
+            mapped.put("raised_currency", fila[8]);
+            mapped.put("round", fila[9]);
             output.add(mapped);
         }
         return output;
